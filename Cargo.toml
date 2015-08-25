@@ -1,7 +1,11 @@
 [package]
+
 name = "rtetris"
 version = "0.0.1"
 authors = [ "PetrKoveshnikov <rjdgtn@gmail.com>" ]
+
+[[bin]]
+name = "rtetris"
 
 [dependencies]
 piston = "*"
@@ -9,4 +13,12 @@ piston2d-graphics = "*"
 pistoncore-glutin_window = "*"
 piston2d-opengl_graphics = "*"
 vecmath = "*"
-rand = "*"
+rand = "0.3"
+
+[features]
+#default = ["music-in-game"]
+music-in-game = ["ears"]
+
+[dependencies.ears]
+git = "https://github.com/rjdgtn/ears.git"
+optional = true
