@@ -1,5 +1,5 @@
 before_install:
 install:
-  - curl -sSf https://static.rust-lang.org/rustup.sh | sh
+  - curl -sSf https://static.rust-lang.org/rustup.sh | sh -y
 script:
   - cargo build --verbose
