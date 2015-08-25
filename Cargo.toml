@@ -1,4 +1,4 @@
-[package]
+﻿[package]
 
 name = "rtetris"
 version = "0.0.1"
@@ -15,10 +15,10 @@ piston2d-opengl_graphics = "*"
 vecmath = "*"
 rand = "0.3"
 
-[features]
+#[features]
 #default = ["music-in-game"]
-music-in-game = ["ears"]
+#music-in-game = ["ears"]
 
-[dependencies.ears]
-git = "https://github.com/rjdgtn/ears.git"
-optional = true
+#[dependencies.ears]
+#git = "https://github.com/rjdgtn/ears.git"
+#optional = true
