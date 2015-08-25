@@ -1,3 +1,6 @@
+env:
+  global:
+    - secure: CzKm6rxW0bUvEWaBGZzYs8Cuz3CBJvx/ahNt1doLem8lTn21rW1kvleTgBcljuMR4ELmwtqylblMHkzr7X7x8DIrmdBiG9IHppr1AKDNiCiHE+s0jLW+9q6lP+72hiC2RT4vzpcfES68QecS4VFc1AWBnkvsDnIF1W6apTP4Yymt+8pu2FJfBz2RlyQTIcH2waiQqB60juNA158ZSLTj8tuG9WlZ59eNld/2OWyDOEColYZbqr0J6O6Rx0gQkLWmv3xZ00Zz5gR5rWZKDKzMvmppZMCuo2smuHf6zLD3a31eWSkCpkvd2uoUTv9iFHJtrO6QGxk7Cg8Mv91swXlL5mXPhW9NbdHgR8Midly5XuUpwKXqteLcGu6pqdYASFLV3cpmP0UJN/gMfL3z3a01TK7iDZKT1HMOGEdzwDhC3p7NuGywOXcyam4qX927iENpQJpmxHKvm6sDB2TPZ2trQ0LVvKU7hLuHasoVEe0RPFIJ5BrmThIbE2ZUgkuUHa+aTIZI0tc7nvswGxAjr4hvOATKslLsBc3Ix2iGl0xFgv2qV8dPL9kXWGHrRJ0tGQNPbhAM1okpQsRVWV9eGsRZ0HbQkmGxsk20nvBSJ+dZKG+3d4SiGFOvCtbJT9DZB9j+P0L9Jt9JglH+S6UHmKVfurHcimqeYe7TMMATP0v/NCU=
 before_install:
 install:
   - curl -sSf -o rustup.sh https://static.rust-lang.org/rustup.sh
@@ -5,3 +8,6 @@ install:
   - sudo ./rustup.sh -y
 script:
   - cargo build --verbose
+  - cargo doc
+after_script:
+  - curl http://www.rust-ci.org/artifacts/put?t=$RUSTCI_TOKEN | sh
