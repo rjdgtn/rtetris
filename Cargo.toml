@@ -4,9 +4,6 @@ name = "rtetris"
 version = "0.0.1"
 authors = [ "PetrKoveshnikov <rjdgtn@gmail.com>" ]
 
-[[bin]]
-name = "rtetris"
-
 [dependencies]
 piston = "*"
 piston2d-graphics = "*"
