@@ -2,7 +2,6 @@
 name = "rtetris"
 version = "0.0.1"
 dependencies = [
- "ears 0.3.0 (git+https://github.com/rjdgtn/ears.git)",
  "piston 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "piston2d-graphics 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "piston2d-opengl_graphics 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -101,14 +100,6 @@ dependencies = [
 name = "dylib"
 version = "0.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "libc 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "ears"
-version = "0.3.0"
-source = "git+https://github.com/rjdgtn/ears.git#0396458f438e55061975c17b928ac3eb563df1d6"
 dependencies = [
  "libc 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
